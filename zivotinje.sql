@@ -1,7 +1,7 @@
 ﻿create table zivotinja(
 ime int,
 datum datetime,
-vrsta int,
+vrsta varchar,
 djelatnik int,
 prostorija int,
 ); 
