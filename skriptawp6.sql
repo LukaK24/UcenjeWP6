@@ -1,4 +1,7 @@
 ﻿-- Ovo je SQL skripta
+
+--use master;
+
 --create database edunovawp6;
 
 --drop database edunovawp6;
@@ -14,24 +17,29 @@
 --);
 
 --create table grupe(
-
 --sifra int,
---naziv varchar (20),
+--naziv varchar(20),
 --velicinagrupe int,
---predavac varchar (50),
+--predavac varchar(50),
 --smjer int
 --);
 
+-- razlika varchar i char
+-- varchar(10)
+-- 'Ana'
+-- char(10)
+-- 'Ana       '
 
---create table polaznici (
---sifra  int,
---ime varchar (50),
---prezime varchar (50),
---email varchar (100),
---oib char (11),
+--create table polaznici(
+--sifra int,
+--ime varchar(50),
+--prezime varchar(50),
+--email varchar(100),
+--oib char(11)
 --);
 
 create table clanovi(
 grupa int,
 polaznik int
 );
+
