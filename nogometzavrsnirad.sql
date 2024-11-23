@@ -5,7 +5,7 @@ drop database if exists nogomet;
 go
 
 
-create database nogomet;
+create database nogomet collate Croatian_CI_AS;
 go
 
 use nogomet;
@@ -48,10 +48,35 @@ iskustvo int not null,
 );
 
 
+insert into klub (sifra,naziv,osnovan,stadion,trener,drzava,liga)
+values (1,'Barcelona','1899',1,1,1,1);
+
+insert into klub (sifra,naziv,osnovan,stadion,trener,drzava,liga)
+values (2,'Real Madrid',1902,1,1,1,1);
+
+insert into klub (sifra,naziv,osnovan,stadion,trener,drzava,liga)
+values (3,'Chelsea',1905,1,1,1,1);
+
+insert into klub (sifra,naziv,osnovan,stadion,trener,drzava,liga)
+values (4,'Juventus',1897,1,1,1,1);
+
+insert into klub (sifra,naziv,osnovan,stadion,trener,drzava,liga)
+values (5,'Manchester City',1880,1,1,1,1);
+
+insert into klub (sifra,naziv,osnovan,stadion,trener,drzava,liga)
+values (6,'Manchester United',1902,1,1,1,1);
+
+select * from klub;
+
+
+insert into utakmica (datum,vrijeme,stadion,domaci_klub,gostojuci_klub )
+values ('20-11-2024','16;00','Old Trafford',1,3);
 
 
 
 
 
 
+
+select * from utakmica;
 
