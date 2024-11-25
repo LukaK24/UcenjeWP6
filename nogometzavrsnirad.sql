@@ -1,15 +1,15 @@
 ﻿--use master;
-go
+--go
 
 --drop database if exists nogomet;
-go
+--go
 
 
 --create database nogomet collate Croatian_CI_AS;
-go 
+--go 
 
 --use nogomet;
-go
+--go
 
 create table trener(
 sifra int not null primary key identity (1,1),
@@ -40,8 +40,8 @@ create table igrac(
 sifra int not null primary key identity (1,1),
 ime varchar (40) not null,
 prezime varchar (30) not null,
-pozicija int not null,
-klub int not null references klub(sifra),
+pozicija varchar (30) not null,
+klub varchar (50) not null references klub(sifra),
 oib char (11)
 );
 
@@ -77,3 +77,14 @@ values
 
 select * from utakmica
 
+
+insert into igrac (ime,prezime,pozicija,klub,oib)
+values
+('Federico','Valverde','obrana','Real Madrid',08057077736),
+('Luka','Modrić','veza','Real Madrid',07837540514),
+('Mateo','Kovačić','veza','Manchester City',26981510319),
+('Joško','Gvardiol','Manchester City','obrana',44021291244),
+('Dani','Olmo','Barcelona','veza',44337232806),
+('Lamine','Yamal','Barcelona','napad',25169325706),
+('Jeremine','Frimpong','Bayern Leverkusen','obrana',99598162856),
+('Florian','Wirtz','Bayern Leverkusen','veza',38124701663);
