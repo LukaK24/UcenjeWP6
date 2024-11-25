@@ -79,7 +79,7 @@ select * from utakmica
 
 drop table utakmica;
 
-
+--Invalid object name 'igrac'.
 insert into igrac (ime,prezime,pozicija,klub,oib)
 values
 ('Federico','Valverde','obrana','Real Madrid',08057077736),
