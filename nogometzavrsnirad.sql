@@ -32,8 +32,8 @@ create table utakmica(
 sifra int not null primary key identity(1,1),
 datum datetime not null,
 vrijeme time not null,
-domaci_klub int  not null references klub(sifra),
-gostojuci_klub int  not null references klub(sifra)
+domaci_klub varchar (40)  not null references klub(sifra),
+gostojuci_klub varchar (40)  not null references klub(sifra)
 );
 
 create table igrac(
@@ -46,14 +46,14 @@ oib char (11)
 );
 
 
---insert into trener (ime,prezime,klub,iskustvo )
---values 
---('Carlo','Anchelotti','Real Madrid',29),
---('Pep','Guardiola','Manchester City',17),
---('Hansi','Flick','Barcelona',18),
---('Xavi','Alonso','Bayern Leverkusen',6);
+insert into trener (ime,prezime,klub,iskustvo )
+values 
+('Carlo','Anchelotti','Real Madrid',29),
+('Pep','Guardiola','Manchester City',17),
+('Hansi','Flick','Barcelona',18),
+('Xavi','Alonso','Bayern Leverkusen',6);
 
---select * from trener;
+select * from trener;
 
 insert into klub (naziv,osnovan,stadion,drzava,liga )
 values 
@@ -63,3 +63,17 @@ values
 ('Bayern Leverkusen',1904,'BayArena','Njemačka','Bundesliga');
 
 select * from klub
+
+-- Invalid object name 'utakimca'.
+insert into utakimca (datum,vrijeme,domaci_klub,gostojuci_klub)
+values 
+('20-05-2024','16:00','Real Madrid','Barcelona'),
+('14-06-2024','19:00','Manchester City','Bayern Leverkusen'),
+('24-04-2024','18:00','Barcelona','Bayer Leverkusen'),
+('25-05-2024','17:00','Manchester City','Bayer Leverkusen'),
+('23-03-2024','19:00','Barcelona','Manchester City'),
+('01-04-2024','18:00','Real Madrid','Bayer Leverkusen'),
+('05-03-2024','18:00','Real Madrid','Barcelona');
+
+select * from utakmica
+
