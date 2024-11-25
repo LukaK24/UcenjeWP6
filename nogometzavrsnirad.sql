@@ -77,6 +77,8 @@ values
 
 select * from utakmica
 
+drop table utakmica;
+
 
 insert into igrac (ime,prezime,pozicija,klub,oib)
 values
@@ -88,3 +90,6 @@ values
 ('Lamine','Yamal','Barcelona','napad',25169325706),
 ('Jeremine','Frimpong','Bayern Leverkusen','obrana',99598162856),
 ('Florian','Wirtz','Bayern Leverkusen','veza',38124701663);
+
+
+drop table igrac;
