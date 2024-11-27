@@ -51,7 +51,7 @@ oib char (11)
 
 insert into klub (naziv,osnovan,stadion,drzava,liga )
 values 
-('1',1902,'Santiago Bernabéu','Španjolska','LaLiga'),
+('1',1902,'Santiago Bernabéu','Španjolska','LaLiga'), --staviti klubove
 ('2',1880,'Etihad','Engleska','Premier League'),
 ('3',1899,'Spotify Camp','Španjolska','LaLiga'),
 ('4',1904,'BayArena','Njemačka','Bundesliga');
@@ -60,9 +60,9 @@ select * from klub
 
 insert into trener (ime,prezime,klub,iskustvo )
 values 
-('Carlo','Anchelotti','1',29), 
-('Pep','Guardiola','2',17),
-('Hansi','Flick','3',18),
+('Carlo','Anchelotti',',29), 
+('Pep','Guardiola',2,17),
+('Hansi','Flick','3,18), --bez jedoastrukih gore
 ('Xavi','Alonso','4',6);
 
 select * from trener;
@@ -71,15 +71,15 @@ select * from trener;
 
 insert into utakmice (datum,domaci_klub,gostojuci_klub)
 values 
-('2024-05-20 18:00','1','3'),  
-('2024-06-14 16:00','2','4'),
-('2024-04-20 19:00','3','4'),
+('2024-05-20 18:00',''3),  
+('2024-06-14 16:00',2,'4'),
+('2024-04-20 19:00','3','4'), --bez jedenoszrukih gore
 ('2024-05-25 16:00','2','4'),
 ('2024-03-23 18:00','3','2'),
 ('2024-04-01 20:00', '1','4'),
 ('2024-03-05 18:00','1','3');
 
-
+select * from utakmice
 
 INSERT INTO igrac (ime, prezime, pozicija, klub, oib)
 VALUES
@@ -92,4 +92,4 @@ VALUES
 ('Jeremine', 'Frimpong', 'RB', 4, '99598162856'),
 ('Florian', 'Wirtz', 'CAM', 4, '38124701663');
 
-
+select * from igrac
