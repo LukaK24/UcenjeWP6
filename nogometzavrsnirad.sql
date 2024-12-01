@@ -1,15 +1,15 @@
 ﻿--use master;
---go
+go
 
 --drop database if exists nogomet;
---go
+go
 
 
 --create database nogomet collate Croatian_CI_AS;
---go 
+go 
 
 --use nogomet;
---go
+go
 
 create table klub(
 sifra int not null primary key identity(1,1),
@@ -33,8 +33,8 @@ create table utakmice(
 sifra int not null primary key identity(1,1),
 datum datetime not null,
 vrijeme time,
-domaci_klub int  not null references klub(sifra),
-gostojuci_klub int  not null references klub(sifra)
+domaci_klub varchar (50) not null references klub(sifra),
+gostojuci_klub varchar (50) not null references klub(sifra)
 );
 
 
@@ -51,33 +51,33 @@ oib char (11)
 
 insert into klub (naziv,osnovan,stadion,drzava,liga )
 values 
-('1',1902,'Santiago Bernabéu','Španjolska','LaLiga'), --staviti klubove
-('2',1880,'Etihad','Engleska','Premier League'),
-('3',1899,'Spotify Camp','Španjolska','LaLiga'),
-('4',1904,'BayArena','Njemačka','Bundesliga');
+('Real Madrid',1902,'Santiago Bernabéu','Španjolska','LaLiga'), 
+('Manchester City',1880,'Etihad','Engleska','Premier League'),
+('Barcelona',1899,'Spotify Camp','Španjolska','LaLiga'),
+('Bayern Leverkusen',1904,'BayArena','Njemačka','Bundesliga');
 
 select * from klub
 
 insert into trener (ime,prezime,klub,iskustvo )
 values 
-('Carlo','Anchelotti',',29), 
-('Pep','Guardiola',2,17),
-('Hansi','Flick','3,18), --bez jedoastrukih gore
-('Xavi','Alonso','4',6);
+('Carlo','Anchelotti','Real Madrid',29), 
+('Pep','Guardiola','Manchester City',17),
+('Hansi','Flick','Barcelona',18),
+('Xavi','Alonso','Bayern Leverkusen',6);
 
 select * from trener;
 
 
 
-insert into utakmice (datum,domaci_klub,gostojuci_klub)
-values 
-('2024-05-20 18:00',''3),  
-('2024-06-14 16:00',2,'4'),
-('2024-04-20 19:00','3','4'), --bez jedenoszrukih gore
-('2024-05-25 16:00','2','4'),
-('2024-03-23 18:00','3','2'),
-('2024-04-01 20:00', '1','4'),
-('2024-03-05 18:00','1','3');
+INSERT INTO utakmice (datum, domaci_klub, gostojuci_klub)
+VALUES
+('2024-05-20 18:00',1, 2),
+('2024-06-14 16:00', 3, 4),
+('2024-04-20 19:00', 2, 4),
+('2024-05-25 16:00', 3, 4),
+('2024-03-23 18:00', 2, 3),
+('2024-04-01 20:00', 1,4),
+('2024-03-05 18:00',1,2);
 
 select * from utakmice
 
