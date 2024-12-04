@@ -3,7 +3,11 @@
 using Ucenje;
 
 
-E03Operatori.Izvedi();
+E03Z1.Izvedi();
+
+
+
+//E03Operatori.Izvedi();
 
 
 
