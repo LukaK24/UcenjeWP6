@@ -25,23 +25,23 @@ namespace Ucenje
             Console.WriteLine("Osijek");
             Console.WriteLine("Osijek");
             Console.WriteLine("Osijek");
-            
+
             // unaprijed
-            for(int i = 0; i < 10; i++)
+            for (int i = 0; i < 10; i++)
             {
-                Console.WriteLine("{0}. Osijek iz petlje",i);
+                Console.WriteLine("{0}. Osijek iz petlje", i);
             }
 
             //unazad
-            for(int i = 10; i>0; i--)
+            for (int i = 10; i > 0; i--)
             {
                 Console.WriteLine("{0}. Unazad", i);
             }
 
             //ugnježđena petlja
-            for(int i = 1; i <= 10; i++)
+            for (int i = 1; i <= 10; i++)
             {
-                for(int j = 1; j <= 10; j++)
+                for (int j = 1; j <= 10; j++)
                 {
                     Console.Write("\t{0}", i * j);
                 }
@@ -53,22 +53,22 @@ namespace Ucenje
 
             // koliko je zbroj prvih 100 brojeva?
             int sum = 0;
-            for(int i = 1; i <= 100; i++)
+            for (int i = 1; i <= 100; i++)
             {
                 sum += i; //postojećoj sumi dodajem vrijednost i
             }
             Console.WriteLine(sum);
             int x = 100;
-            Console.WriteLine((x+1)*x/2);
+            Console.WriteLine((x + 1) * x / 2);
 
 
             // Ispiši sve parne brojeve od 1 do 20
-            for(int i = 1; i <= 20; i++)
+            for (int i = 1; i <= 20; i++)
             {
                 if (i % 2 == 0)
                 {
                     //Console.WriteLine(i);
-                    Console.Write("{0},",i);
+                    Console.Write("{0},", i);
                 }
             }
             // DZ: Maknuti zadnji zarez
@@ -78,7 +78,7 @@ namespace Ucenje
             int idiDo = 34;
 
             // ovako u konačnici mora izgledati kod: bez fiksnih vrijednosti
-            for(int i = idiOd; i <= idiDo; i++)
+            for (int i = idiOd; i <= idiDo; i++)
             {
                 Console.WriteLine(i);
             }
@@ -87,7 +87,7 @@ namespace Ucenje
             int[] brojevi = { 1, 2, 3, 3, 2, 3, 3, 3, 4, 3, 3 };
 
             //ispisati sve brojeve iz niza
-            for(int i = 0; i < brojevi.Length; i++)
+            for (int i = 0; i < brojevi.Length; i++)
             {
                 Console.WriteLine(brojevi[i]);
             }
@@ -100,17 +100,37 @@ namespace Ucenje
                 {7,8,9 }
             };
 
-            for(int i = 0; i < tablica.GetLength(0); i++) // X dimenzija GetLength(0)
+            for (int i = 0; i < tablica.GetLength(0); i++) // X dimenzija GetLength(0)
             {
-                for(int j=0;j<tablica.GetLength(1); j++) // Y dimenzija GetLength(1)
+                for (int j = 0; j < tablica.GetLength(1); j++) // Y dimenzija GetLength(1)
                 {
-                    Console.Write(tablica[i,j] + " ");
+                    Console.Write(tablica[i, j] + " ");
                 }
                 Console.WriteLine();
             }
 
+            for (int i = 0; i < 10; i++)
+            { 
+                if (i == 3)
+                {
+                    continue;
+                }
 
-        }
+            if (i == 7)
+            {
+                break;
+            }
 
-    }
-}
+
+
+
+
+           
+            
+            
+
+
+        
+
+    
+
