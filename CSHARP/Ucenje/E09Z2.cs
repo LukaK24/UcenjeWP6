@@ -14,7 +14,8 @@ namespace Ucenje
             while (true)
             {
                 Console.Write("Unesi broj: ");
-                broj = int.Parse(Console.ReadLine());
+                int v = int.Parse(Console.ReadLine());
+                broj = v;
                 if (broj == -1) 
                 {
                     break;

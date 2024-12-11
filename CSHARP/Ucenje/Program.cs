@@ -2,9 +2,16 @@
 
 using Ucenje;
 
+E10Z2.Izvedi();
+
+//E10Z1.Izvedi();
+
+//E10ForEachpetlja.Izvedi();
+
+
 //E09z1.Izvedi();
 
-E09Z2.Izvedi();
+//E09Z2.Izvedi();
 
 //E09DoWhilePetlja.Izvedi();
 
