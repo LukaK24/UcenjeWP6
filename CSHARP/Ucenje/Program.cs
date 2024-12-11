@@ -2,11 +2,21 @@
 
 using Ucenje;
 
+//E09z1.Izvedi();
+
+E09Z2.Izvedi();
+
+//E09DoWhilePetlja.Izvedi();
+
+
+//E08Whilepetlja.Izvedi();
+
+
 //E07Z2.Izvedi();
 
 //E07Z1.Izvedi();
 
-E07ForPetlja.Izvedi();
+//E07ForPetlja.Izvedi();
 
 //E04Z2.Izvedi();
 
