@@ -35,8 +35,32 @@ namespace Ucenje
             {
                 Console.WriteLine("neparno");
             }
+
+ 
+            
+                // Deklaracija niza za pohranu 25 brojeva
+                int[] brojevi = new int[25];
+
+                // Unos brojeva
+                Console.WriteLine("Unesite 25 brojeva:");
+                for (int i = 0; i < brojevi.Length; i++)
+                {
+                    Console.Write($"Broj {i + 1}: ");
+                    brojevi[i] = int.Parse(Console.ReadLine());
+                }
+
+                // Izračunavanje kocki i ispis u tablici
+                Console.WriteLine("\nBroj\tKocka");
+                for (int i = 0; i < brojevi.Length; i++)
+                {
+                    int kocka = brojevi[i] * brojevi[i] * brojevi[i];
+                    Console.WriteLine($"{i + 1}\t{kocka}");
+                }
             
         }
-
     }
+
 }
+
+    
+
