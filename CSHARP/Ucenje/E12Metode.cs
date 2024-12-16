@@ -45,6 +45,40 @@ namespace Ucenje
         {
             return int.MaxValue;
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="niz"></param>
+        /// <returns></returns>
+        private static int Tip4(int[] niz) 
+        {
+            int suma = 0;
+                foreach(int i in niz) 
+            {
+                suma += i;
+            }
+            return suma;
+        }
+
+        public static int UcitajCijeliBroj(string poruka) 
+        {
+            while (true) 
+            {
+                Console.WriteLine(poruka);
+                try
+                {
+                    return int.Parse(Console.ReadLine());
+                }
+                catch 
+                {
+                    Console.WriteLine("Problem kod učitanja broja!");
+                    
+                }
+            }
+
+
+            //return 0;
+        }
 
     }
 
