@@ -2,42 +2,33 @@
 
 using Ucenje;
 
-E13Z3.Izvedi();
-
-//E13Z2.Izvedi();
+E13Z2.Izvedi();
 
 //E13Z1.Izvedi();
 
 //E13Rekurzija.Izvedi();
- 
+
+
 //E12Z1.Izvedi();
 
 
 //E12Metode.Izvedi();
 
 
-///E11Z1LOSE.Izvedi();
+//E11Z1LOSE.Izvedi();
 
 //E11TryCatch.Izvedi();
 
-//Vjezba.Izvedi();
-
-//E10Z2.Izvedi();
-
 //E10Z1.Izvedi();
-
-//E10ForEachpetlja.Izvedi();
-
-
-//E09z1.Izvedi();
+//E10ForeachPetlja.Izvedi();
 
 //E09Z2.Izvedi();
 
+//E09Z1.Izvedi();
+
 //E09DoWhilePetlja.Izvedi();
 
-
-//E08Whilepetlja.Izvedi();
-
+//E08WhilePetlja.Izvedi();
 
 //E07Z2.Izvedi();
 

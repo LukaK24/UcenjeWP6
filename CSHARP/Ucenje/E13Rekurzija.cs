@@ -8,17 +8,25 @@ namespace Ucenje
 {
     internal class E13Rekurzija
     {
+        // Rekurzija je kada metoda zove samu sebe
+        // UZ UVIJET PREKIDA REKURZIJE
 
-        public static void Izvedi() 
+        public static void Izvedi()
         {
+            // Izvedi(); // Ovdje dobijemo Stack overflow https://stackoverflow.com/
 
-            //Izvedi();
             Console.WriteLine(Zbroji(100));
 
-        } 
-        private static int Zbroji(int broj) 
+        }
+
+        private static int Zbroji(int broj)
         {
-            return broj + Zbroji(broj - 1);
-        } 
+            if (broj == 1)
+            {
+                return 1;
+            }
+            return broj + Zbroji(broj-1);
+        }
+        // 100 + 99 + 98 + 97 + ... + 1
     }
 }

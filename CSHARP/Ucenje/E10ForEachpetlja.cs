@@ -6,50 +6,63 @@ using System.Threading.Tasks;
 
 namespace Ucenje
 {
-    internal class E10ForEachpetlja
+    internal class E10ForeachPetlja
     {
 
-        public static void Izvedi() 
+        public static void Izvedi()
         {
-            //Console.WriteLine("Osijek");
+            //Console.WriteLine("E10");
 
-            Console.Write("Unesi ime svog Grada: ");
+            Console.Write("Unesi ime svog grada: ");
 
             string grad = Console.ReadLine();
-            Console.Write(grad);
 
-            char[] znakovigrad = new char[6];
-            znakovigrad[0]= 'O';
-            znakovigrad[1] = 's';
-            znakovigrad[2] = 'i';
-            znakovigrad[3] = 'j';
-            znakovigrad[4] = 'e';
-            znakovigrad[5] = 'k';
-            
+            Console.WriteLine(grad);
 
-            for (int i = 0; i < 6; i++) 
+            // string je zapravo niz znakova char[]
+            // za Osijek 
+            char[] znakoviGrad = new char[6];
+            znakoviGrad[0] = 'O';
+            znakoviGrad[1] = 's';
+            znakoviGrad[2] = 'i';
+            znakoviGrad[3] = 'j';
+            znakoviGrad[4] = 'e';
+            znakoviGrad[5] = 'k';
+
+            for(int i = 0; i < 6; i++)
             {
-                Console.Write(znakovigrad[i]);
+                Console.Write(znakoviGrad[i]);
             }
+            Console.WriteLine();
 
-            for (int i = 0;i <grad.Length; i++) 
+            for(int i = 0;i<grad.Length; i++)
             {
                 Console.Write(grad[i]);
             }
-            
-           foreach (char znak in znakovigrad) 
+            Console.WriteLine();
+
+            // često se šećemo od početka do kraja
+            foreach (char znak in znakoviGrad)
             {
                 Console.Write(znak);
             }
-           foreach(char c in grad) 
+            Console.WriteLine();
+
+            foreach (char c in grad)
             {
-                Console.WriteLine(c);
+                Console.Write(c);
             }
-            for(int i = grad.Length - 1; i >= 0; i--) 
+            Console.WriteLine();
+
+            // ispiši uneseni grad unazad
+            // Valpovo   ovoplav
+
+            for(int i = grad.Length - 1; i >= 0; i--)
             {
                 Console.Write(grad[i]);
             }
-            
+
+
         }
     }
 }

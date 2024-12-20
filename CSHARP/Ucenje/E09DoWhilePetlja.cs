@@ -9,21 +9,31 @@ namespace Ucenje
     internal class E09DoWhilePetlja
     {
 
-        public static void Izvedi() 
+        public static void Izvedi()
         {
+            //Console.WriteLine("E09");
 
-            do 
+            // provjera uvjeta je na kraju petlje i obavezno je jednom izvodi
+
+            do
             {
                 Console.WriteLine("Osijek");
-            }while (false);
+            } while (false);
+
+
+            // zbroj prvih 100 brojeva
 
             int i = 1, suma = 0;
-            do 
+            do
             {
                 suma += i;
             }while (++i<=100);
-            Console.WriteLine(suma);
-        }
-    }
 
+            Console.WriteLine(suma);
+            // sve ostalo vrijedi kao i za for i while
+
+
+        }
+
+    }
 }
