@@ -2,7 +2,7 @@
 
 using Ucenje;
 
-E15Subota.Izvedi();
+//E15Subota.Izvedi();
 
 //E14Z1.Izvedi();
 
@@ -23,7 +23,7 @@ E15Subota.Izvedi();
 
 //E11TryCatch.Izvedi();
 
-//E10Z1.Izvedi();
+E10Z1.Izvedi();
 //E10ForeachPetlja.Izvedi();
 
 //E09Z2.Izvedi();
