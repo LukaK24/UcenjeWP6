@@ -125,22 +125,10 @@ namespace Ucenje
             }
             Console.WriteLine();
         }
-        private static void JediničnaVrijednost(int broj) 
-        {
-            int cijelibroj = E12Metode.UcitajCijeliBroj("Unesi te broj između 20 i 50");
-
-            if (broj >= 20 && broj <= 50) 
-            {
-                int jedinica = broj % 10;
-                Console.WriteLine("Vrijednost jedinice broja {0} je: {1}", broj, jedinica);
-            }
-            else 
-            {
-                Console.WriteLine("Broj nije u rasponud od 20 do 50");
-            }
+        
             
             
-        }
+        
 
     }
 }
