@@ -2,9 +2,11 @@
 
 using Ucenje;
 
+Proba.Izvedi();
+
 //E15Subota.Izvedi();
 
-E14Vjezbanje.Izvedi();
+//E14Vjezbanje.Izvedi();
 
 //E13Z2.Izvedi();
 

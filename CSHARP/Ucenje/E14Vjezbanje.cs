@@ -88,7 +88,7 @@ namespace Ucenje
             int rez = int.MaxValue;
             while (rez > manjiOd)
             {
-                rez =(int)nr.Zero;
+                rez =0;
                 foreach (char c in broj) 
                 {
                     rez += int.Parse(c.ToString());
@@ -176,5 +176,6 @@ namespace Ucenje
             }
             Console.WriteLine();
         }
+
     }
 }
