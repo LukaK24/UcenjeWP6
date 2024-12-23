@@ -123,7 +123,7 @@ namespace Ucenje
                 }
 
                 Console.WriteLine(i);
- 
+
             }
 
             // DZ: saznati kako prekinuti ugnježđenu petlju (iz najdublje vanjsku)
