@@ -2,6 +2,10 @@
 
 using Ucenje;
 
+
+//ovo je nova instanca klase program 
+new Ucenje.E17ClasaObjekt.Program();
+
 //E15Subota.Izvedi();
 
 //E14Z1.Izvedi();
@@ -23,7 +27,7 @@ using Ucenje;
 
 //E11TryCatch.Izvedi();
 
-E10Z1.Izvedi();
+//E10Z1.Izvedi();
 //E10ForeachPetlja.Izvedi();
 
 //E09Z2.Izvedi();

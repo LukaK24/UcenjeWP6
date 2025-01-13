@@ -32,7 +32,7 @@ namespace Ucenje
             Console.WriteLine(izraz[izraz.Length-1-1]);
             for (int i = 0; i < izraz.Length/2; i++) 
             {
-            if(izraz[i] == izraz[izraz.Length - 1 - i]) 
+            if(izraz[i] != izraz[izraz.Length - 1 - i]) 
                 {
                     palindrom = false; 
                     break;
