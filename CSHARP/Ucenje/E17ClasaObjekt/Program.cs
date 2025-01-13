@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Ucenje.E17ClasaObjekt.Edunova;
 
 namespace Ucenje.E17ClasaObjekt
 {
@@ -43,9 +44,50 @@ namespace Ucenje.E17ClasaObjekt
             //osoba.Mjesto=Mjesto;
 
             //ispiši osijek
-            Console.WriteLine(osoba.Mjesto.Naziv);
+            //Console.WriteLine(osoba.Mjesto.Naziv); 
 
+            //stari nacin
+            if(osoba.Mjesto != null) 
+            {
+
+                Console.WriteLine(osoba.Mjesto.Naziv);
+
+            }
+            //kraci nacin
+            Console.WriteLine(osoba.Mjesto?.Naziv); //? je ovdje indikacija da ne pukne
+
+
+
+            osoba.Mjesto = new Mjesto() { Naziv = "Osijek" };
+
+            Console.WriteLine(osoba.Mjesto.Županija?.župan??"Prazno");  //naokn ?? ide vriojedsnot koja se koristi ako je svojstvo null
+
+
+            Smjer smejr = new Smjer() { naziv = "WEB progrmiranje" };
+            Grzupa grupa = new () {naziv ="WP6", smjer = smejr }; //još krace
+
+
+            Polaznik[] polazniciniz = new Polaznik[2];
+
+
+            polazniciniz[0] = new Polaznik() { ime = "Pero" };
+            polazniciniz[0] = new Polaznik() { ime = "Marija" };
+
+            grupa.polaznici = polazniciniz;
+
+            //ispiati podaci o grupi
+            Console.WriteLine(grupa.naziv);
+            Console.WriteLine(grupa.smjer.naziv);
+            foreach(Polaznik p in grupa.polaznici) 
+            {
+
+                Console.WriteLine("{0} {1}", p.ime, p.prezime);
+            }
+
+            Console.WriteLine("***************************");
+            grupa.detaljigrupe();
         }
+
 
    
         
