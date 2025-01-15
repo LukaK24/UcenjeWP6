@@ -9,6 +9,7 @@ namespace Ucenje.E18NalijedivanjePoliformizam
     public class Smjer:Entitet // klasa smjer nasljeduje javna i zasticena svojstva i metode iz klase entitet
     {
         public string naziv { get; set; } = "";
+        public static object Naziv { get; private set; }
 
         public override string ToString()
         {
@@ -16,7 +17,7 @@ namespace Ucenje.E18NalijedivanjePoliformizam
         }
         public override bool Equals(object? obj)
         {
-            return ((Smjer)obj??).Naziv.Equals(naziv);
+            return Smjer.Naziv.Equals(naziv);
         }
     }
 }
