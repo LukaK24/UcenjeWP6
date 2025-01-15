@@ -3,12 +3,17 @@
 using Ucenje;
 
 
+<<<<<<< HEAD
 //ovo je nova instanca klase program 
 new Ucenje.E17ClasaObjekt.Program();
+=======
+
+E14Vjezbanje.Izvedi();
+>>>>>>> 944ea02abac22114d7c7e490e279beb992362ace
 
 //E15Subota.Izvedi();
 
-//E14Z1.Izvedi();
+//E14Vjezbanje.Izvedi();
 
 //E13Z2.Izvedi();
 

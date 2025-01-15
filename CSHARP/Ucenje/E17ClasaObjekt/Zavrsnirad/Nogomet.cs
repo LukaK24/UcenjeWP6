@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace Ucenje.E17ClasaObjekt.Zavrsnirad
 {
-    internal class Nogomet
+    public class Nogomet
     {
+        public int sifra { get; set; }
+        public string naziv { get; set; } = "";
+        public string osnovan { get; set; }
+        public string stadion  { get; set; }
+        public string drzava { get; set; }
+        public string liga { get; set; }
+
     }
 }

@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Ucenje.E17ClasaObjekt.Zavrsnirad
 {
-    internal class trener
+    public class trener
     {
+        public int sifra { get; set; }
+        public string ime { get; set; } = "";
+        public string prezime { get; set; }
+        public string klub { get; set; }
+        public string iskustvo { get; set; } = "";
     }
 }

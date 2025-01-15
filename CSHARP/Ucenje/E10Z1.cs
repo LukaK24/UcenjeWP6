@@ -20,26 +20,41 @@ namespace Ucenje
 
         public static void Izvedi()
         {
-            Console.WriteLine("palnidrom");
-            string izraz = E12Metode.UcitajString("Unesi izraz za provjeru palindroma");
+
+            string s = "RužanEdoodenažur";
+            Console.WriteLine(string.Join(';',s.ToCharArray()));
+
+            Console.WriteLine("palindrom");
+            string izraz = E12Metode.UcitajString("Unesi izraz za provjeru palindroma: ");
 
             bool palindrom = true;
-            izraz = izraz.ToUpper();
-            Console.WriteLine(izraz[0]);
-            Console.WriteLine(izraz[izraz.Length-1-0]);
+            izraz = izraz.ToUpper() ;
+            //ispiši prvo slovo
+            Console.WriteLine(izraz[0]); // i=0
+            //ispisati zadnje slovo
+            Console.WriteLine(izraz[izraz.Length-1-0]); // i=0
 
-            Console.WriteLine(izraz[1]);
-            Console.WriteLine(izraz[izraz.Length-1-1]);
-            for (int i = 0; i < izraz.Length/2; i++) 
+            // ispiši drugo slovo
+            Console.WriteLine(izraz[1]); // i=1
+            //ispiši predzadnje slovo
+            Console.WriteLine(izraz[izraz.Length-1-1]); // i=1
+            for (int i = 0; i < izraz.Length/2; i++)
             {
+<<<<<<< HEAD
             if(izraz[i] != izraz[izraz.Length - 1 - i]) 
+=======
+                if (izraz[i] != izraz[izraz.Length- 1 - i])
+>>>>>>> 944ea02abac22114d7c7e490e279beb992362ace
                 {
-                    palindrom = false; 
+                    palindrom = false;
                     break;
                 }
             }
+
             Console.WriteLine("Izraz {0} {1} palindrom", izraz, palindrom ? "JE" : "NIJE");
+
         }
 
+    }
 
-    }    }    
+}

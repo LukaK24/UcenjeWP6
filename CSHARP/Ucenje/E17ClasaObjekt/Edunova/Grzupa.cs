@@ -22,7 +22,7 @@ namespace Ucenje.E17ClasaObjekt.Edunova
             Console.WriteLine(smjer.naziv);
             foreach (Polaznik p in polaznici ?? []) 
             {
-            
+                Console.WriteLine(p.imeprezime());
             }
         }
     }
