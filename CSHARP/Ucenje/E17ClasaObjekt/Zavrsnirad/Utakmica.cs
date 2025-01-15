@@ -11,8 +11,8 @@ namespace Ucenje.E17ClasaObjekt.Zavrsnirad
         public int sifra { get; set; }
         public DateTime datum { get; set; }
         public TimeOnly vrijeme { get; set; }
-        public string domaci_klub { get; set; }
-        public string gostujuci_klub { get; set; }
+        public string domaci_klub { get; set; } = "";
+        public string gostujuci_klub { get; set; } = "";
         
     }
 }

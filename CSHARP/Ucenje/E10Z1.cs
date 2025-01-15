@@ -40,11 +40,7 @@ namespace Ucenje
             Console.WriteLine(izraz[izraz.Length-1-1]); // i=1
             for (int i = 0; i < izraz.Length/2; i++)
             {
-<<<<<<< HEAD
-            if(izraz[i] != izraz[izraz.Length - 1 - i]) 
-=======
                 if (izraz[i] != izraz[izraz.Length- 1 - i])
->>>>>>> 944ea02abac22114d7c7e490e279beb992362ace
                 {
                     palindrom = false;
                     break;

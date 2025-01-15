@@ -10,8 +10,8 @@ namespace Ucenje.E17ClasaObjekt.Zavrsnirad
     {
         public int sifra { get; set; }
         public string ime { get; set; } = "";
-        public string prezime { get; set; }
-        public string klub { get; set; }
+        public string? prezime { get; set; }
+        public string klub { get; set; } = "";
         public string iskustvo { get; set; } = "";
     }
 }
