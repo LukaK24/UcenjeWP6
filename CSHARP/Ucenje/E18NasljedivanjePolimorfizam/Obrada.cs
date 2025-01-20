@@ -8,9 +8,8 @@ namespace Ucenje.E18NasljedivanjePolimorfizam
 {
     public abstract class Obrada
     {
-        // deklariranje metode ponašanje koje se mora odraditi ali se ne zna kako
+        // deklariranje metode - ponašanja koje se mora odraditi ali se ne zna kako
         public abstract void Procesuiraj();
-
 
     }
 }

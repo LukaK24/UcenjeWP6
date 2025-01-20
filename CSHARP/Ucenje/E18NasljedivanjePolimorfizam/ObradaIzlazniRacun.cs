@@ -10,7 +10,7 @@ namespace Ucenje.E18NasljedivanjePolimorfizam
     {
         public override void Procesuiraj()
         {
-            Console.WriteLine("Obradujem izlazni racun");
+            Console.WriteLine("Obrađujem izlazni račun");
             Console.WriteLine("Pošalji ga");
         }
     }
