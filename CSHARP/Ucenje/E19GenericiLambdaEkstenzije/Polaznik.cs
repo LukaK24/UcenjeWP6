@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace Ucenje.E19GenericiLambdaEkstenzije
 {
-    public static class Ekstenzije
+    public class Polaznik : Entitet
     {
 
-        public static void Ispisi(this Entitet e)
-        {
-            Console.WriteLine(e.Sifra);
-        }
+        public string? Ime { get; set; }
+        public string? Prezime { get; set; }
 
     }
 }
