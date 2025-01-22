@@ -1,6 +1,6 @@
 ﻿namespace Ucenje.E20KonzolnaAplikacija
 {
-    internal class Pomocno
+    internal class pomoc
     {
 
         public static bool DEV=false;
