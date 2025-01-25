@@ -31,7 +31,7 @@ namespace Ucenje.E20KonzolnaAplikacija
 
         private void OdabirOpcijeIzbornika()
         {
-           switch(pomoc.UcitajRasponBroja("Odaberite stavku izbornika", 1, 5))
+           switch(Pomocno.UcitajRasponBroja("Odaberite stavku izbornika", 1, 5))
             {
                 case 1:
                     PrikaziGrupe();
@@ -59,9 +59,9 @@ namespace Ucenje.E20KonzolnaAplikacija
         {
             PrikaziGrupe();
             var g = Grupe[
-                pomoc.UcitajRasponBroja("Odaberi redni broj grupe za brisanje", 1, Grupe.Count) - 1
+                Pomocno.UcitajRasponBroja("Odaberi redni broj grupe za brisanje", 1, Grupe.Count) - 1
                 ];
-            if (pomoc.UcitajBool("Sigurno obrisati " + g.Naziv + "? (DA/NE)", "da"))
+            if (Pomocno.UcitajBool("Sigurno obrisati " + g.Naziv + "? (DA/NE)", "da"))
             {
                 Grupe.Remove(g);
             }
@@ -71,22 +71,22 @@ namespace Ucenje.E20KonzolnaAplikacija
         {
             PrikaziGrupe();
             var g = Grupe[
-                pomoc.UcitajRasponBroja("Odaberi redni broj grupe za promjenu",1,Grupe.Count)-1
+                Pomocno.UcitajRasponBroja("Odaberi redni broj grupe za promjenu",1,Grupe.Count)-1
                 ];
             // copy paste s linije 102 - izvući u metodu
-            g.Sifra = pomoc.UcitajRasponBroja("Unesi šifru grupe", 1, int.MaxValue);
-            g.Naziv = pomoc.UcitajString("Unesi naziv grupe", 50, true);
+            g.Sifra = Pomocno.UcitajRasponBroja("Unesi šifru grupe", 1, int.MaxValue);
+            g.Naziv = Pomocno.UcitajString("Unesi naziv grupe", 50, true);
             //smjer
             Izbornik.ObradaSmjer.PrikaziSmjerove();
 
             g.Smjer = Izbornik.ObradaSmjer.Smjerovi[
-                pomoc.UcitajRasponBroja("Odaberi redni broj smjera", 1, Izbornik.ObradaSmjer.Smjerovi.Count) - 1];
+                Pomocno.UcitajRasponBroja("Odaberi redni broj smjera", 1, Izbornik.ObradaSmjer.Smjerovi.Count) - 1];
 
-            g.Predavac = pomoc.UcitajString("Unesi ime i prezime predavača", 50, true);
-            g.MaksimalnoPolaznika = pomoc.UcitajRasponBroja("Unesi maksimalno polaznika", 1, 30);
+            g.Predavac = Pomocno.UcitajString("Unesi ime i prezime predavača", 50, true);
+            g.VelicinaGrupe = Pomocno.UcitajRasponBroja("Unesi Veličinu grupe", 1, 30);
 
             // polaznici
-            g.Polaznici = UcitajPolaznike((int)g.MaksimalnoPolaznika);
+            g.Polaznici = UcitajPolaznike((int)g.VelicinaGrupe);
 
 
         }
@@ -115,32 +115,31 @@ namespace Ucenje.E20KonzolnaAplikacija
             Console.WriteLine("Unesite tražene podatke o grupi");
 
             Grupa g = new Grupa();
-            g.Sifra = pomoc.UcitajRasponBroja("Unesi šifru grupe", 1, int.MaxValue);
-            g.Naziv = pomoc.UcitajString("Unesi naziv grupe", 50, true);
+            g.Sifra = Pomocno.UcitajRasponBroja("Unesi šifru grupe", 1, int.MaxValue);
+            g.Naziv = Pomocno.UcitajString("Unesi naziv grupe", 50, true);
             //smjer
             Izbornik.ObradaSmjer.PrikaziSmjerove();
 
             g.Smjer = Izbornik.ObradaSmjer.Smjerovi[
-                pomoc.UcitajRasponBroja("Odaberi redni broj smjera",1, Izbornik.ObradaSmjer.Smjerovi.Count) - 1];
+                Pomocno.UcitajRasponBroja("Odaberi redni broj smjera",1, Izbornik.ObradaSmjer.Smjerovi.Count) - 1];
             
-            g.Predavac = pomoc.UcitajString("Unesi ime i prezime predavača", 50, true);
-            g.MaksimalnoPolaznika = pomoc.UcitajRasponBroja("Unesi maksimalno polaznika", 1, 30);
+            g.Predavac = Pomocno.UcitajString("Unesi ime i prezime predavača", 50, true);
+            g.VelicinaGrupe = Pomocno.UcitajRasponBroja("Unesi veličinu grupe", 1, 30);
 
             // polaznici
-            g.Polaznici = UcitajPolaznike((int)g.MaksimalnoPolaznika);
+            g.Polaznici = UcitajPolaznike((int)g.VelicinaGrupe);
 
             Grupe.Add(g);
         }
 
-
         private List<Polaznik> UcitajPolaznike(int maksimalnoPolaznika)
         {
             List<Polaznik> lista = new List<Polaznik>();
-            while(lista.Count < maksimalnoPolaznika && pomoc.UcitajBool("Za unos polaznika unesi DA", "da") )
+            while(lista.Count < maksimalnoPolaznika && Pomocno.UcitajBool("Za unos polaznika unesi DA", "da") )
             {
                 Izbornik.ObradaPolaznik.PrikaziPolaznike();
                 Console.WriteLine((Izbornik.ObradaPolaznik.Polaznici.Count +1)  + ". Dodaj novog polaznika");
-                var odabranaOpcija = pomoc.UcitajRasponBroja("Odaberi redni broj polaznika ili zadnji broj za dodavanje novog", 1,
+                var odabranaOpcija = Pomocno.UcitajRasponBroja("Odaberi redni broj polaznika ili zadnji broj za dodavanje novog", 1,
                         Izbornik.ObradaPolaznik.Polaznici.Count+1);
                 if(odabranaOpcija == Izbornik.ObradaPolaznik.Polaznici.Count + 1)
                 {
@@ -150,7 +149,7 @@ namespace Ucenje.E20KonzolnaAplikacija
                 }
                 else
                 {
-                    lista.Add(Izbornik.ObradaPolaznik.Polaznici[ odabranaOpcija]);
+                    lista.Add(Izbornik.ObradaPolaznik.Polaznici[ odabranaOpcija-1]);
                 }
                
             }
