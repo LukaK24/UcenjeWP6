@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,35 +10,30 @@ namespace Ucenje
     {
         public E21Subota()
         {
-            Console.WriteLine("E21Subota");
-            //Izvedi();
+            //Console.WriteLine("Hello from E21Subota");
 
-            SlucajniBrojevi();
+           // SlucajniBrojevi();
+            Ljubav();
+        }
+
+        private void Ljubav()
+        {
+            var ona = "Marta";
+            var on = "Manuel";
+
+            var izraz = ona.Trim().ToLower() + on.Trim().ToLower();
+
+            Console.WriteLine(izraz);
+            var brojevi = PrebrojiZnakove(izraz);
+
+            Console.WriteLine(string.Join('|',izraz.ToArray()));
+            Console.WriteLine(string.Join('|',brojevi));
 
 
         }
 
-        private void SlucajniBrojevi()
+        private int[] PrebrojiZnakove(string izraz)
         {
-
-            Random random = new Random();
-
-            Console.WriteLine("Generirani slučajni brojevi:");
-
-
-            for (int i = 0; i < 10; i++)
-            {
-
-                int broj = random.Next(20, 31);
-                Console.WriteLine(broj);
-            }
-
-            var on = "Manuel";
-            var ona = "Marta";
-
-            var izraz =ona.Trim().ToLower()+ on.Trim().ToLower();
-            Console.WriteLine(izraz);
-
             int[] brojevi = new int[izraz.Length];
             var ponovilose = 0;
             for (int i = 0; i < izraz.Length; i++)
@@ -54,15 +47,20 @@ namespace Ucenje
                     }
                 }
                 brojevi[i] = ponovilose;
+
             }
-            Console.WriteLine(string.Join('|',brojevi));
+            return brojevi;
+        }
 
+        private void SlucajniBrojevi()
+        {
+            var rnd = new Random();
 
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine(rnd.Next(20, 31));
+            }
+        }
 
-
-
-
-
-        }   }
-
- }
+    }
+}

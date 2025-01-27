@@ -99,15 +99,22 @@
                 return s;
             }
         }
-        internal static string UcitajString(string poruka, int max, bool obavezno,string StaraVrijednost)
+        /// <summary>
+        /// Učitava string vrijednost s konzole uz mogućnost prikaza stare vrijednosti i opcije za odustajanje.
+        /// </summary>
+        /// <param name="poruka">Poruka koja se prikazuje korisniku.</param>
+        /// <param name="max">Maksimalna dozvoljena duljina stringa.</param>
+        /// <param name="obavezno">Indikator da li je unos obavezan.</param>
+        /// <param name="StaraVrijednost">Stara vrijednost koja se prikazuje korisniku.</param>
+        /// <returns>Uneseni string ili stara vrijednost ako je korisnik odustao, unio 0.</returns>
+        internal static string UcitajString(string poruka, int max, bool obavezno, string StaraVrijednost)
         {
             string s;
             while (true)
             {
-                Console.Write(poruka + "("+StaraVrijednost+") 0 za odustani" +  ": ");
+                Console.Write(poruka + "(" + StaraVrijednost + ") 0 za odustani" + ": ");
                 s = Console.ReadLine().Trim();
-
-                if (s=="0")
+                if (s == "0")
                 {
                     return StaraVrijednost;
                 }
@@ -119,7 +126,6 @@
                 return s;
             }
         }
-
         internal static string UcitajString(string stara,string poruka, int max, bool obavezno)
         {
             string s;
