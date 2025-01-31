@@ -2,9 +2,9 @@
 
 using Ucenje;
 
-//new E21Subota();
+new E21Subota();
 
-new Ucenje.E20KonzolnaAplikacija.Izbornik();
+//new Ucenje.E20KonzolnaAplikacija.Izbornik();
 
 //new Ucenje.E19GenericiLambdaEkstenzije.Program();
 
